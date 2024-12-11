@@ -27,10 +27,7 @@
           id="text-input"
           placeholder="Enter text to summarize here..."
         ></textarea>
-        <p>
-          To test the API, you can use the following buttons. Click on the
-          buttons to test the corresponding endpoints.
-        </p>
+        <button id="summarize-btn">Summarize</button>
       </section>
       <section class="flex-column">
         <textarea
@@ -39,6 +36,10 @@
           aria-label="Summary of text"
           disabled
         ></textarea>
+      </section>
+      <section id="loading-section" class="flex-column loading-section">
+        <img src="images/loading-spinner.svg" alt="Loading spinner" />
+        <h3>Summarizing...</h3>
       </section>
     </main>
     <script type="module" src="./index.js"></script>
