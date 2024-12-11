@@ -1,15 +1,16 @@
 :root {
   --text-font: "Armata", sans-serif;
-  --text-size: calc(1em + 0.5vw);
+  --text-size: calc(1rem + 0.5vw);
   --text-color: #e9f2f9;
   --backgrd-color: #1b325f;
   --button-backgrd-color: #3a89c9;
+  --button-size: calc(var(--text-size) * 1.5);
   --copied-backgrd-color: #f26c4f;
   --hover-color: #9cc4e4;
 
   --heading-font: "Brawler", serif;
   --base-size: 1.3rem;
-  --scale: 1.3;
+  --scale: 1.2;
   --base-line-height: 1.5;
   --h1: calc(var(--h2) * var(--scale));
   --h2: calc(var(--h3) * var(--scale));
@@ -46,9 +47,71 @@ h2 {
   font-size: var(--h2);
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: var(--backgrd-color);
+  color: var(--text-color);
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font-family: var(--text-font);
+  font-size: var(--button-size);
+  background-color: var(--button-backgrd-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 2.5em;
+  width: 50%;
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+textarea {
+  width: 95%;
+  flex-grow: 1;
+  min-height: 8.75em;
+  resize: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8em 0.6em;
+  margin-bottom: 0.8em;
+  font-size: var(--text-size);
+}
+
 /* Utility Classes */
 
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+/* Classes */
+
+.loading-section {
+  display: none;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgrd-color);
+}
+
+.loading-section img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
 }
