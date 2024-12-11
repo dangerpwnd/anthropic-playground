@@ -16,5 +16,31 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Anthropic API Testing</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Anthropic API Testing - Text Summary</h1>
+    </header>
+    <main>
+      <section class="flex-column">
+        <h2>API Testing - Summarize This</h2>
+        <textarea
+          id="text-input"
+          placeholder="Enter text to summarize here..."
+        ></textarea>
+        <p>
+          To test the API, you can use the following buttons. Click on the
+          buttons to test the corresponding endpoints.
+        </p>
+      </section>
+      <section class="flex-column">
+        <textarea
+          id="text-output"
+          placeholder="Summary will appear here..."
+          aria-label="Summary of text"
+          disabled
+        ></textarea>
+      </section>
+    </main>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
