@@ -1,6 +1,4 @@
 :root {
-  --heading-font: "Brawler", serif;
-  --heading-size: calc(4em + 0.5vw);
   --text-font: "Armata", sans-serif;
   --text-size: calc(1em + 0.5vw);
   --text-color: #e9f2f9;
@@ -8,6 +6,17 @@
   --button-backgrd-color: #3a89c9;
   --copied-backgrd-color: #f26c4f;
   --hover-color: #9cc4e4;
+
+  --heading-font: "Brawler", serif;
+  --base-size: 1.3rem;
+  --scale: 1.3;
+  --base-line-height: 1.5;
+  --h1: calc(var(--h2) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h3: calc(var(--h4) * var(--scale));
+  --h4: calc(var(--h5) * var(--scale));
+  --h5: calc(var(--h6) * var(--scale));
+  --h6: var(--base-size);
 }
 
 * {
@@ -22,6 +31,19 @@ body {
   color: var(--text-color);
   background-color: var(--backgrd-color);
   height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
 }
 
 /* Utility Classes */
