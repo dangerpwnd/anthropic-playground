@@ -1,0 +1,32 @@
+:root {
+  --heading-font: "Brawler", serif;
+  --heading-size: calc(4em + 0.5vw);
+  --text-font: "Armata", sans-serif;
+  --text-size: calc(1em + 0.5vw);
+  --text-color: #e9f2f9;
+  --backgrd-color: #1b325f;
+  --button-backgrd-color: #3a89c9;
+  --copied-backgrd-color: #f26c4f;
+  --hover-color: #9cc4e4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  background-color: var(--backgrd-color);
+  height: 100%;
+}
+
+/* Utility Classes */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
