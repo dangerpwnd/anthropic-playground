@@ -11,7 +11,9 @@ summarizeButton.addEventListener("click", summarizeText);
 async function summarizeText() {
   displayLoadingSection();
   const text = textInput.value;
-  const response = await fetch(`/api/summarize?text=${text}`);
+  const response = await fetch(
+    `http://localhost:3000/api/summarize?text=${encodeURIComponent(text)}`
+  );
   const data = await response.json();
   hideLoadingSection();
   console.log(response);
