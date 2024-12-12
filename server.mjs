@@ -1,6 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk/index.mjs";
-const express = require("express");
-require("dotenv").config();
+import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const anthropic = new Anthropic({
   apiKey: process.env.CLAUDE_KEY,
