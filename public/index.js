@@ -17,7 +17,10 @@ async function summarizeText() {
   const data = await response.json();
   hideLoadingSection();
   console.log(response);
-  textOutput.value = data.content[0].text;
+  console.log(data);
+  if (data != null) {
+    textOutput.value = data;
+  }
 }
 
 function displayLoadingSection() {
